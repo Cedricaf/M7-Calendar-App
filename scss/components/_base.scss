@@ -13,28 +13,6 @@ body{
 
 
 
-.container{
-    background: colors.$discord-blue;
-    border-radius: 2rem;
-    padding: 2rem;
-    width: 100rem;
-    height: auto;
-    border: 0.5rem solid colors.$discord-gray;
-}
-
-.img_container{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    
-}
-
-.img{
-    border-radius: 2rem;
-    width: 100%;
-    height: 100%;
-}
-
 footer{
     width: 100%;
     height: 20rem;

@@ -1,18 +1,121 @@
 body {
-  background: #23272a;
+  padding: 2rem;
+  height: 100vh;
+  background: rgb(67, 89, 61);
+  font-family: sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #FFFFFF;
-  font-family: "Open Sans", sans-serif;
-  flex-wrap: wrap;
-  gap: 2rem;
 }
 
-footer {
-  width: 100%;
-  height: 20rem;
-  background: #99aab5;
+h3 {
+  font-weight: 600;
+  font-style: italic;
+}
+
+.calendar {
+  margin: auto;
+  width: 98%;
+  max-width: 60rem;
+  padding: 4rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.calendar_title {
+  color: #42593D;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.calendar header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.calendar nav {
+  display: flex;
+  align-items: center;
+}
+
+.calendar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.calendar ul li {
+  width: 14.2857142857%;
+  margin-top: 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+#prev,
+#next {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+#prev::before,
+#next::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  border-color: #42593D;
+}
+
+#next::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#prev::before {
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+#prev:hover::before,
+#next:hover::before {
+  border-color: #000;
+}
+
+.days-in-the-week {
+  font-weight: 600;
+}
+
+.dates-generator li.today {
+  color: #fff;
+  cursor: pointer;
+}
+
+.dates-generator li.today::before {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #42593D;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.dates-generator li.inactive {
+  color: #ccc;
 }
 
 *, *::after, *::before {
